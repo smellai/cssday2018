@@ -1,0 +1,677 @@
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+.reveal.css-day .demo-pagination .text-button {
+  color: #00979d;
+  cursor: pointer;
+  font-family: "Typonine Sans Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+  text-decoration: none;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #7fcbcd; }
+
+.reveal.css-day .demo-pagination .text-button {
+  background: transparent;
+  border: 0;
+  font-family: "Typonine Sans Medium", "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 0;
+  text-transform: uppercase;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #005c5f; }
+
+@keyframes busymove {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 50px 50px; } }
+
+.reveal.css-day .demo-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 30px 0 0;
+  padding: 0; }
+  .reveal.css-day .demo-pagination .move-page {
+    flex-grow: 1;
+    max-width: 90px;
+    text-align: center; }
+    @media screen and (max-width: 640px) {
+      .reveal.css-day .demo-pagination .move-page {
+        max-width: none;
+        text-align: center;
+        width: 100%; }
+        .reveal.css-day .demo-pagination .move-page .text-button {
+          text-transform: uppercase; }
+        .reveal.css-day .demo-pagination .move-page.prev {
+          border-bottom: 1px solid rgba(12, 161, 166, 0.25);
+          margin-bottom: 10px;
+          padding-bottom: 10px; }
+        .reveal.css-day .demo-pagination .move-page.next {
+          border-top: 1px solid rgba(12, 161, 166, 0.25);
+          margin-top: 10px;
+          padding-top: 10px; } }
+  .reveal.css-day .demo-pagination .page-number {
+    flex-grow: 1;
+    max-width: 50px;
+    text-align: center; }
+  .reveal.css-day .demo-pagination .text-button {
+    font-family: "Typonine Sans Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+    text-align: center;
+    text-transform: none;
+    width: 100%; }
+    .reveal.css-day .demo-pagination .text-button:hover {
+      color: #005c5f; }
+    .reveal.css-day .demo-pagination .text-button.active {
+      color: #434f54;
+      cursor: default; }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+.reveal.css-day .demo-pagination .text-button {
+  color: #00979d;
+  cursor: pointer;
+  font-family: "Typonine Sans Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+  text-decoration: none;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #7fcbcd; }
+
+.reveal.css-day .demo-pagination .text-button {
+  background: transparent;
+  border: 0;
+  font-family: "Typonine Sans Medium", "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 0;
+  text-transform: uppercase;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #005c5f; }
+
+@keyframes busymove {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 50px 50px; } }
+
+@font-face {
+  font-family: 'Typonine Mono Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001720.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001720.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Mono Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001722.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001722.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Light';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001726.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001726.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001728.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001728.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Regular Italic';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001729.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001729.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Medium';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001730.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001730.svg#Typotheque_webfonts_service") format("svg"); }
+
+@font-face {
+  font-family: 'Typonine Sans Bold';
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot");
+  src: url("https://content.arduino.cc/fonts/WF-028075-009795-001732.eot?#iefix") format("embedded-opentype"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.woff") format("woff"), url("https://content.arduino.cc/fonts/WF-028075-009795-001732.svg#Typotheque_webfonts_service") format("svg"); }
+
+.reveal.css-day .demo-pagination .text-button {
+  color: #00979d;
+  cursor: pointer;
+  font-family: "Typonine Sans Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+  text-decoration: none;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #7fcbcd; }
+
+.reveal.css-day .demo-pagination .text-button {
+  background: transparent;
+  border: 0;
+  font-family: "Typonine Sans Medium", "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  outline: none;
+  padding: 0;
+  text-transform: uppercase;
+  transition: color .2s ease-out; }
+  .reveal.css-day .demo-pagination .text-button:hover {
+    color: #005c5f; }
+
+@keyframes busymove {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 50px 50px; } }
+
+.reveal.css-day section img,
+.reveal.css-day section pre,
+.reveal.css-day section blockquote {
+  border: 0;
+  box-shadow: none; }
+
+.reveal.css-day section pre {
+  margin: 0;
+  width: 100%; }
+
+.reveal.css-day section.main-title h1,
+.reveal.css-day section.main-title h2 {
+  color: #005c5f; }
+
+.reveal.css-day .titles-on-bkg h1,
+.reveal.css-day .titles-on-bkg h2 {
+  background-color: #00979d;
+  color: #fff; }
+
+.reveal.css-day .teal-bkg {
+  background-color: #0ca1a6;
+  color: #fff; }
+
+.reveal.css-day .row {
+  align-items: center;
+  display: flex;
+  justify-content: space-around; }
+
+.reveal.css-day ul {
+  list-style-type: circle; }
+  .reveal.css-day ul.gallery {
+    height: 100%;
+    list-style-type: none;
+    margin: 0; }
+    .reveal.css-day ul.gallery .active {
+      opacity: 1; }
+    .reveal.css-day ul.gallery .inactive {
+      opacity: 0; }
+    .reveal.css-day ul.gallery li {
+      height: 100%;
+      width: 100%;
+      background-attachment: fixed;
+      background-color: #0ca1a6;
+      background-position: center 50px;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      position: fixed;
+      transition: opacity 0.3s ease-in-out; }
+    .reveal.css-day ul.gallery label {
+      position: absolute;
+      top: 15px;
+      right: 0;
+      left: 0;
+      background-color: #0ca1a6;
+      color: #fff;
+      display: block;
+      font-family: "Typonine Sans Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+      font-size: 55px;
+      min-width: 150px;
+      padding: 10px;
+      text-align: center;
+      text-transform: uppercase; }
+
+.reveal.css-day .light-bkg {
+  background-color: #7fcbcd; }
+
+.reveal.css-day .orange-bkg {
+  background-color: #e67e22;
+  color: #fff; }
+  .reveal.css-day .orange-bkg h1,
+  .reveal.css-day .orange-bkg h2 {
+    color: #fff; }
+  .reveal.css-day .orange-bkg h3 {
+    color: #434f54; }
+  .reveal.css-day .orange-bkg a {
+    color: #7fcbcd; }
+    .reveal.css-day .orange-bkg a:hover {
+      color: #00979d; }
+
+.reveal.css-day .bronze-bkg {
+  background-color: #bcac99; }
+  .reveal.css-day .bronze-bkg h3 {
+    color: #9e846d; }
+
+.reveal.css-day .gallery ~ .controls {
+  color: #fff; }
+
+.reveal.css-day .code-row {
+  justify-content: space-between; }
+  .reveal.css-day .code-row pre {
+    display: flex; }
+  .reveal.css-day .code-row.compiled {
+    font-size: 30px; }
+    .reveal.css-day .code-row.compiled pre {
+      margin: 15px; }
+
+.reveal.css-day .demo-text {
+  color: #005c5f;
+  font-family: "Typonine Mono Regular", "Lucida Grande", Lucida, Verdana, sans-serif;
+  font-size: 22px;
+  margin-left: 15px; }
+
+.reveal.css-day .teal-loader-container {
+  height: 100px;
+  width: 100px; }
+
+.reveal.css-day .teal-loader {
+  height: 66.6666666667px;
+  width: 66.6666666667px;
+  box-shadow: inset 0 0 0 8.3333333333px;
+  color: #7fcbcd;
+  font-size: 6px;
+  margin: 16.6666666667px;
+  position: relative;
+  text-indent: -99999em;
+  transform: translateZ(0);
+  z-index: auto; }
+  .reveal.css-day .teal-loader, .reveal.css-day .teal-loader::before, .reveal.css-day .teal-loader::after {
+    border-radius: 50%; }
+  .reveal.css-day .teal-loader::before, .reveal.css-day .teal-loader::after {
+    position: absolute;
+    top: -16.6666666667px;
+    height: 100px;
+    width: 50px;
+    animation: spinner-animation 2s infinite ease;
+    background: #e67e22;
+    content: '';
+    z-index: -1; }
+  .reveal.css-day .teal-loader::before {
+    animation-delay: 1.5s;
+    border-radius: 100px 0 0 100px;
+    left: -16.6666666667px;
+    transform-origin: 50px 50px; }
+  .reveal.css-day .teal-loader::after {
+    border-radius: 0 100px 100px 0;
+    left: 33.3333333333px;
+    transform-origin: 0 50px; }
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.reveal.css-day .teal-loader-yellow {
+  height: 66.6666666667px;
+  width: 66.6666666667px;
+  box-shadow: inset 0 0 0 8.3333333333px;
+  color: #f1c40f;
+  font-size: 6px;
+  margin: 16.6666666667px;
+  position: relative;
+  text-indent: -99999em;
+  transform: translateZ(0);
+  z-index: auto; }
+  .reveal.css-day .teal-loader-yellow, .reveal.css-day .teal-loader-yellow::before, .reveal.css-day .teal-loader-yellow::after {
+    border-radius: 50%; }
+  .reveal.css-day .teal-loader-yellow::before, .reveal.css-day .teal-loader-yellow::after {
+    position: absolute;
+    top: -16.6666666667px;
+    height: 100px;
+    width: 50px;
+    animation: spinner-animation 2s infinite ease;
+    background: #e67e22;
+    content: '';
+    z-index: -1; }
+  .reveal.css-day .teal-loader-yellow::before {
+    animation-delay: 1.5s;
+    border-radius: 100px 0 0 100px;
+    left: -16.6666666667px;
+    transform-origin: 50px 50px; }
+  .reveal.css-day .teal-loader-yellow::after {
+    border-radius: 0 100px 100px 0;
+    left: 33.3333333333px;
+    transform-origin: 0 50px; }
+
+@keyframes spinner-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+.reveal.css-day .small-height {
+  height: 420px; }
+
+.reveal.css-day .smaller-height {
+  height: 120px; }
+
+.reveal.css-day .demo-pagination {
+  background-color: #ecf1f1;
+  margin-top: 20px;
+  padding: 6px; }
+  .reveal.css-day .demo-pagination li {
+    display: flex; }
+
+.reveal.css-day .custom-list {
+  font-size: 30px;
+  letter-spacing: .4px;
+  line-height: 60px;
+  margin-top: 30px; }
+  .reveal.css-day .custom-list b {
+    color: #d35400; }
