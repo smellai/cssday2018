@@ -1,0 +1,191 @@
+@import 'node_modules/arduino-sass/src/arduino-sass';
+
+.reveal.css-day {
+  section {
+    img,
+    pre,
+    blockquote {
+      border: 0;
+      box-shadow: none;
+    }
+
+    pre {
+      margin: 0;
+      width: 100%;
+    }
+
+    &.main-title {
+      h1,
+      h2 {
+        color: $teal5;
+      }
+    }
+  }
+
+  .titles-on-bkg {
+    h1,
+    h2 {
+      background-color: $teal2;
+      color: $white;
+    }
+  }
+
+  .teal-bkg {
+    background-color: $teal1;
+    color: $white;
+  }
+
+  .row {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  ul {
+    list-style-type: circle;
+
+    &.gallery {
+      height: 100%;
+      list-style-type: none;
+      margin: 0;
+
+      .active {
+        opacity: 1;
+      }
+
+      .inactive {
+        opacity: 0;
+      }
+
+      li {
+        @include size(100%);
+
+        background-attachment: fixed;
+        background-color: $teal1;
+        background-position: center 50px;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        position: fixed;
+        transition: opacity $animation-timing-quick ease-in-out;
+      }
+
+      label {
+        @include position(absolute, 15px 0 null 0);
+
+        background-color: $teal1;
+        color: $white;
+        display: block;
+        font-family: $typonine-sans-regular;
+        font-size: 55px;
+        min-width: 150px;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .light-bkg {
+    background-color: $teal0;
+  }
+
+  .orange-bkg {
+    background-color: $orange;
+    color: $white;
+
+    h1,
+    h2 {
+      color: $white;
+    }
+
+    h3 {
+      color: $dust;
+    }
+
+    a {
+      color: $teal0;
+
+      &:hover {
+        color: $teal2;
+      }
+    }
+  }
+
+  .bronze-bkg {
+    background-color: $lightbronze;
+
+    h3 {
+      color: $gold;
+    }
+  }
+
+  .gallery ~ .controls {
+    color: $white;
+  }
+
+  .code-row {
+    justify-content: space-between;
+
+    pre {
+      display: flex;
+    }
+
+    &.compiled {
+      font-size: 30px;
+
+      pre {
+        margin: 15px;
+      }
+    }
+  }
+
+  .demo-text {
+    color: $teal5;
+    font-family: $typonine-mono-regular;
+    font-size: 22px;
+    margin-left: 15px;
+  }
+
+  .teal-loader-container {
+    @include size(100px);
+  }
+
+  .teal-loader {
+    @include spinner($orange, $teal0, 100px);
+  }
+
+  .teal-loader-yellow {
+    @include spinner($orange, $sunflower, 100px);
+  }
+
+  .small-height {
+    height: 420px;
+  }
+
+  .smaller-height {
+    height: 120px;
+  }
+
+  .demo-pagination {
+    @extend %ardu-pagination;
+
+    background-color: $clouds;
+    margin-top: 20px;
+    padding: 6px;
+
+    li {
+      display: flex;
+    }
+  }
+
+  .custom-list {
+    font-size: 30px;
+    letter-spacing: .4px;
+    line-height: 60px;
+    margin-top: 30px;
+
+    b {
+      color: $pumpkin;
+    }
+  }
+}

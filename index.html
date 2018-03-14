@@ -1,0 +1,767 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Arduino Sass</title>
+
+		<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/custom.css">		
+		<link rel="stylesheet" href="css/theme/arduino.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal css-day">
+			<div class="slides">
+				<!-- The Werewolf of Eschenbach, Germany: line engraving, 1685 -->
+				<section class="main-title">
+					<h1>
+						<a href="https://joind.in/talk/d9e58" target="_blank">
+							ARDUINO-SASS
+						</a>
+					</h1>
+					<h2>Una libreria di stili per i prodotti Web Arduino</h2>
+					<!--<img src="images/chart.png"/>-->
+				</section>
+				
+				<section>
+					<h1>Stefania Mellai</h1>
+					<div>
+						<a href="mailto:s.mellai@arduino.cc?Subject=CssDay2018" target="_top">s.mellai@arduino.cc</a>
+					</div>
+				</section>
+
+				<section>
+					<section data-background-image="images/maker-kids-making.jpg" class="titles-on-bkg">
+						<h1>Cos'è Arduino?</h1>
+
+						<aside class="notes">
+							Arduino è una piattaforma di sviluppo open source che si articola in tre elementi fondamentali.	
+						</aside>
+					</section>
+
+					<section data-background-image="images/hardware.jpg" class="titles-on-bkg">
+						<h2 class="fragment">Hardware</h2>
+
+						<aside class="notes">
+							è una scheda elettronica programmabile a basso costo, utilizzata per la <b>prototipazione</b> di dispositivi elettronici, sia in ambito <b>professionale</b> che nell'<b>hobbistica</b> e anche in ambito <b>didattico</b> per insegnare l'elettronica nelle scuole.
+
+							Arduino è programmabile infatti in una versione semplificata del C++, ed è stato pensato per <b>ridurre al minimo lo sforzo iniziale</b> nell'approccio all'informatica e all'elettronica, tanto che anche dei bambini di 10 anni possono riuscire a realizzare un progetto utilizzando questa piattaforma.
+						</aside>
+					</section>
+
+					<section>
+						<div class="row">
+							<img data-src="images/ide.png" width="40%">
+							<h2 class="fragment">Software</h2>
+						</div>
+						<aside class="notes">
+							Da oltre 10 anni Arduino mantiene un software desktop open-source, scritto in Java, che consente di programmare le schede.<br><br>sAnche l'<b>hardware è open</b> e gli schemi delle schede sono liberamente scaricabili sul nostro sito.
+						</aside>
+					</section>
+
+					<section data-background-image="images/community.jpg" class="titles-on-bkg">
+						<h2 class="fragment">Community</h2>
+						<aside class="notes">
+							Una parte fondamentale di Arduino è la sua <b>Community</b>, che si esprime attraverso gli <b>Arduino User Groups</b>, <b>workshop</b> organizzati nei Fablab o Marker/Hacker spaces, <b>Eventi</b> come ArduinoDay o Maker Faire. 
+							La community puo proporre <b>contributi</b> al nostro software open source, sengalare problemi o proporre miglioramenti o nuove funzionalita attraverso GitHub o attraverso il forum ufficiale. 
+							Il forum e in gran parte tenuto vivo e moderato da appassionati volontari. Arduino coinvolge inoltre di tanto in tanto i suoi utenti piu affezionati in programmi di <b>betatesting</b>.
+							<ul>
+								<li>
+									Arduino User Groups
+								</li>
+								<li>
+									Workshops @ Fablabs, Hacker spaces, maker spaces
+								</li>
+								<li>
+									Eventi: Maker faire, Arduino Day
+								</li>
+								<li>
+									Contributi al software
+								</li>
+								<li>
+									Programmi di beta testing
+								</li>
+							</ul>
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section class="teal-bkg">
+						<h1>Arduino e il Web</h1>
+
+						<aside class="notes">
+							Arduino sviluppa e mantiene numerosi <b>siti Web</b> per la diffusione di <b>contenuti</b>, la gestione della <b>community</b>, delle <b>notizie</b> e per la <b>vendita e promozione</b> dei suoi prodotti. <br><br>
+							Tutti i siti condividono <b>header, footer</b> e <b>sistema di autenticazione</b>. Gli utenti possono creare un profilo per accedere a risorse e funzionalita private.
+						</aside>
+					</section>
+
+					<section class="teal-bkg">
+						<h2>arduino.cc</h2>
+					</section>
+
+					<section>
+						<ul class="gallery" data-interval="2" data-iterations="0" data-mode="full-screen">
+							<li>
+								<img src="images/sites/homepage.jpg" alt="Homepage and static generic contents"/>
+							</li>
+							<li>
+								<img src="images/sites/reference.jpg" alt="Language Reference and Glossary"/>
+							</li>
+							<li>
+								<img src="images/sites/store.jpg" alt="Retail and Resellers Store"/>
+							</li>
+							<li>
+								<img src="images/sites/forum.jpg" alt="Forum"/>
+							</li>
+							<li>
+								<img src="images/sites/blog.jpg" alt="Blog"/>
+							</li>
+							<li>
+								<img src="images/sites/profile.jpg" alt="Arduino Profile"/>
+							</li>
+							<li>
+								<img src="images/sites/sso.jpg" alt="SSO"/>
+							</li>
+							<li>
+								<img src="images/sites/aug.jpg" alt="Arduino User Groups"/>
+							</li>
+							<li>
+								<img src="images/sites/arduinoday.jpg" alt="Arduino Day"/>
+							</li>
+						</ul>
+
+						<aside class="notes">
+							<ul>
+								<li>
+									Home
+								</li>
+								<li>
+									Reference e Glossary
+								</li>
+								<li>
+									Store
+								</li>
+								<li>
+									Forum
+								</li>
+								<li>
+									Blog
+								</li>
+								<li>
+									Profile and SSO
+								</li>
+								<li>
+									User Groups
+								</li>
+								<li>
+									Arduino Day
+								</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section class="teal-bkg">
+						<h2>create.arduino.cc</h2>
+
+						<aside class="notes">
+							Negli utlimi tre anni circa, Arduino ha investito sempre più nel cloud e ha deciso di sviluppare una versione Web del suo ambiente di sviluppo, cosi come una piattaforma per la condivisione di tutorial e una piattaforma per la gestione di dispositivi IoT.
+						</aside>
+					</section>
+
+					<section>
+						<ul class="gallery" data-interval="2"  data-iterations="0" data-mode="full-screen">
+							<li>
+								<img src="images/create/editor.jpg" alt="Web Editor"/>
+							</li>
+							<li>
+								<img src="images/create/projecthub.jpg" alt="Project Hub"/>
+							</li>
+							 <li>
+								<img src="images/create/mydevices.jpg" alt="IoT Devices"/>
+							</li> 
+							<li>
+								<img src="images/create/getting-started2.jpg" alt="Getting Started"/>
+							</li>
+							<li>
+								<img src="images/create/plans.jpg" alt="Payments App"/>
+							</li>
+							<li>
+								<img src="images/create/ctc.jpg" alt="CTC platform"/>
+							</li>
+						</ul>
+
+						<aside class="notes">
+							La gestione di tutto questo ecosistema, costituisce probabilmente un caso <b>non tanto diffuso</b> nell'esperienza dello sviluppo Web.<br>
+							è forse piu comune che uno sviluppatore web lavori per una società di consulenza, una web agency o anche come freelance e abbia a che fare con <b>clienti diversi, ognuno con la sua brand identity</b>.<br>
+							Oppure che lavori per una società che produce <b>un software solo</b>.<br>
+							Personalmente, in ogni altra azienda in cui ho lavorato, ho lavorato ad un unico software.
+							Nel caso di Arduino invece il cliente è sempre lo stesso ed è rappresentato dai nostri stessi utenti.<br>
+							Abbiamo una quantità non indifferente di prodotti anche molto diversi tra loro (anche per quanto riguarda le tecnologie e i linguaggi in cui sono costruiti) che però devono <b>condividere 
+							la brand identity, lo stile degli elementi dell-interfaccia grafica e anche riproporre intere parti esattamente uguali (header e footer ad esempio)</b>.<br>
+							Oltre a quelli che ho presentato, abbiamo anche altri tool di amministrazione <b>privati</b> che, sebbene meno rifiniti nel design, cercano di rispettare un minimo di coerenza con il resto dell'ecosistema web.<br>
+							Fin'ora le <b>maggiori sfide</b> su cui abbiamo lavorato in questo senso sono: il sistema di autenticazione centralizzato, la condivisione di header e footer e la realizzazione dello stile di componenti grafici riutilizzabili.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>
+							Pallottole d'argento
+						</h2>
+						<div class="row">
+							<img data-src="images/MMM.jpg"/>
+							<blockquote cite="https://www.amazon.it/gp/product/B00B8USS14/ref=as_li_tl?ie=UTF8&camp=3414&creative=21718&creativeASIN=B00B8USS14&linkCode=as2&tag=motovia-21&linkId=9c5f93011bb565681a9591d46d20077f">
+								&ldquo;There is no single development, in either technology or management technique, which by itself promises even one order-of-magnitude improvement within a decade in productivity, in reliability, in simplicity.&ldquo;
+							</blockquote>
+						</div>
+						<aside class="notes">
+								Ho appena finito di leggere questo libro, The mythical man-month, di Frederick Brooks.<br>
+								è probabilmente il più grande classico di ingegneria del software, citato in tantissimi altri libri e articoli. La prima edizione è stata pubblicata nel <b>75</b>, ed è poi uscita una riedizione nel ventennale, con dei capitoli aggiuntivi.<br>
+								Il libro discute sull'efficacia dell' "uomo mese" come unità di misura del lavoro necessario a completare un certo dipo di task e, in particolare, mette in evidenza quanto tale unità di misura sia un <b>modello inadeguato o quanto meno troppo semplicistico</b> se applicato al software.<br>
+								Da questo libro viene infatti la legge di Brooks, che sostiene che <em>aggiungere forza lavoro a un progetto software in ritardo, lo farà tardare ancora di più</em>.<br>
+								Questo è dovuto alla natura intrinsecamente complessa del software stesso, ma soprattutto al fatto che la <b>gestione della comunicazione</b> tra le persone che lavorano ad uno stesso progetto richieda sempre piu tempo ed energie man mano che il numero delle persone coinvolte cresce.<br>
+								La produzione del software è davvero paragonabile ad un parto, infatti, come tutti sanno, <b>non si può portare a compimento una gravidanza in un mese semplicemente mettendo insieme nove donne</b>.
+							<ul>
+								<li>
+									1975 - 1995
+								</li>
+								<li>
+									<a href="https://it.wikipedia.org/wiki/Legge_di_Brooks" target="_blank">Legge di Brooks</a>: Aggiungere forza lavoro ad un progetto software in ritardo, lo farà ritardare ancora di più.
+									O anche <a href="https://www.goodreads.com/quotes/172818-you-can-t-produce-a-baby-in-one-month-by-getting" target="_blank">9 donne non fanno un bambino in un mese</a>.
+								</li>
+								<li>
+									mese - uomo unità di misura -> estrema semplificazione
+								</li>
+								<li>
+									La natura del software fa si che non verrà mai inventato niente che faccia per la produttività, semplicità e affidabilità del software ciò che le evoluzioni in campo elettronico hanno fatto per l'hardware
+								</li>
+							</ul>
+						</aside>
+					</section>
+
+					<section data-background-video="video/werewolf.mp4" data-background-video-loop="true">
+						<aside class="notes">
+							Uno dei capitoli aggiunti nell'edizione del 95 si intitola: <b>"no silver bullet"</b>.<br>
+							In questo capitolo Brooks spiega che, nonostante spesso compaiano nuovi linguaggi di programmazione, framework e tool che promettono di incrementare <b>la produttività o la semplicità o l'affidabilità</b> del software in modo decisivo, non potrà mai davvero comparire nessun tipo di innovazione che faccia miracoli in questo campo.<br>
+							Il software è come un lupo mannaro, anche ciò che all'inizio ci sembrava innocuo, rassicurante e amichevole può, da un momento all'altro, trasformarsi in un mostro. E non abbiamo proiettili d'argento a nostra disposizione.<br>
+							Questo è particolarmente vero per quanto riguarda il <b>CSS</b>, perché, come sappiamo, a volte ci succede di rimuovere delle funzionalità e ci dimentichiamo di rimuovere il css che era associato a quella funzionalità e<br>
+							questo <b>zombie</b> potrebbe non avere nessun effetto sul resto dell'applicazione, oppure potrebbe invece produrre qualche effetto, ma non sappiamo di preciso su quante altre parti dell'applicazione ed è difficile uscire dal tunnel e ci ritroviamo con una code base davvero <b>sporca e sempre più difficile da mantenere</b>.
+							<br>Persino in javascript è molto più semplice scoprire se una funzione non viene più utilizzata, facendo una semplice ricerca.
+						</aside>
+					</section>
+
+					<section>
+						<div class="row">
+							<blockquote cite="https://www.amazon.it/gp/product/B00B8USS14/ref=as_li_tl?ie=UTF8&camp=3414&creative=21718&creativeASIN=B00B8USS14&linkCode=as2&tag=motovia-21&linkId=9c5f93011bb565681a9591d46d20077f">
+								There is no royal road, but there is a road
+							</blockquote>
+						</div>
+						<ul>
+							<li>
+								Sfruttare software già esistente
+							</li>
+							<li>
+								Crescita organica dei progetti, disciplina nel mantenere il codice pulito
+							</li>
+							<li>
+								Modularità / Riuso
+							</li>
+						</ul>
+
+						<aside class="notes">
+							Nonostante molti abbiano accusato Brooks di eccessivo <b>pessimismo</b> per questa sua visione, lui spiega di non essere pessimista, ma semplicemente <b>scettico</b> e che<br>
+							la sua idea non è che non esista una via d'uscita, ma semplicemente che la via non sia semplice. Gli strumenti che abbiamo sono i soliti (sopra)<br>
+								
+							- Crescita organica: scrivere il codice man mano che serve, che può essere usato e testato
+						</aside>
+					</section>
+				</section>
+
+				<section class="orange-bkg">
+					<h1>Arduino Sass</h1>
+
+					<ul>
+						<li>
+							Collezione di mixin e placeholders SASS
+						</li>
+						<li>
+							Include <a href="https://www.bourbon.io/" target="_blank">Bourbon</a>
+						</li>
+						<li>
+							Usato in oltre 10 siti in produzione
+						</li>
+						<li>
+							Installabile con npm
+						</li>
+						<li>
+							In continua evoluzione, versionato
+						</li>
+					</ul>
+
+					<aside class="notes">
+						Cosa abbiamo fatto per tenere lontani i lupi mannari? <br>Come accennavo in precedenza, una delle strategie che abbiamo messo insieme per <b>mantenere coerenti i nostri progetti e controllare la complessità</b> con cui abbiamo a che fare, è stata scrivere una libreria di stili riutilizzabili.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Installazione</h2>
+
+					<section>
+						<pre>
+							<code data-trim>
+							npm install --save git+ssh://git@github.com/bcmi-labs/sass.git#x.x.x
+							</code>
+						</pre>
+						<aside class="notes">
+							- Come fare? Come abbiamo fatto con header-footer? Perché qui invece abbiamo fatto così?
+							<br> - Costringi tutti i siti a scaricare anche codice non utile
+							<br> - Non costringi lo sviluppatore a fare ovverride di stili
+							<br> - Il versionamento consente di non rompere i siti che usano versioni precedenti						
+							<br> - Disaccoppiamento tra html e stile, Separazione degli interessi
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					Libreria CSS VS SASS
+
+					<section>
+						<img src="images/bootstrap.png">
+					</section>
+
+					<section>
+						<img src="images/sass.png">
+
+						<aside class="notes">
+							Siti fatti in maniera diversa da persone diverse. Questo approccio consente di applicare uno stile senza modificare il DOM.
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h2>Utilizzo</h2>
+
+					<section>
+						<div>
+							Import di variabili:
+							<pre>
+								<code data-trim>
+								@import 'node_modules/arduino-sass/src/variables';
+								</code>
+							</pre>
+						</div>
+
+							Import mixin singolo:
+							<pre>
+								<code data-trim>
+								@import 'node_modules/arduino-sass/src/buttons';
+								</code>
+							</pre>
+
+							Import completo:
+							<pre>
+								<code data-trim>
+								@import 'node_modules/arduino-sass/src/arduino-sass';
+								</code>
+							</pre>
+					</section>
+				</section>
+
+				<section class="light-bkg">
+					<h2>Variabili</h2>
+
+					<div>
+						<pre>
+							<code data-trim>
+							$teal5: #005c5f;
+							$typonine-mono-regular: 'Typonine Mono Regular', 'Lucida Grande', Lucida, Verdana, sans-serif;
+							</code>
+						</pre>
+					</div>
+					<div class="row code-row">
+						<pre>
+							<code data-trim>
+								.demo-text {
+								  color: $teal5;
+								  font-family: $typonine-mono-regular;
+								}
+							</code>
+						</pre>
+
+						<div class="demo-text">
+							"A good programmer is someone who always looks both ways before crossing a one-way street." - Doug Linder
+						</div>
+					</div>
+					<aside class="notes">
+						Palette colori, font e qualche altra variabile
+					</aside>
+				</section>
+
+				<section class="orange-bkg">
+					<h2>Mixin</h2>
+					
+					<section>
+						<h3>Usati per elementi configurabili</h3>
+						<ul>
+							<li>
+								button
+							</li>
+							<li>
+								spinner
+							</li>
+							<li>
+								toggle
+							</li>
+							<li>
+								...
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<div>
+							<pre>
+								<code data-trim>
+								@mixin spinner($color, $background, $size, $border: $size / 6, $duration: 2s) {
+								  @include size($size - 2 * $border);
+								  box-shadow: inset 0 0 0 $size / 12;
+								  color: $background;
+								  font-size: 6px;
+								  margin: $border;
+								  ...
+								</code>
+							</pre>
+						</div>
+						<div class="row code-row">
+							<pre>
+								<code data-trim>
+								@include spinner($orange, $teal0, 100px);
+								</code>
+							</pre>
+
+							<div class="teal-loader-container">
+								<div class="teal-loader">
+								</div>
+							</div>
+						</div>
+
+						<div class="row code-row">
+							<pre>
+								<code data-trim>
+								@include spinner($orange, $sunflower, 100px);
+								</code>
+							</pre>
+
+							<div class="teal-loader-container">
+								<div class="teal-loader-yellow">
+								</div>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<section class="bronze-bkg">
+					<h2>Placeholder</h2>
+
+					<section>
+						<h3>Usati per elementi non configurabili</h3>
+						<ul>
+							<li>
+								checkbox
+							</li>
+							<li>
+								radio button
+							</li>
+							<li>
+								sidebar
+							</li>
+							<li>
+								pagination
+							</li>
+							<li>
+								...
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<div>
+							<pre class="small-height">
+								<code data-trim>
+								%ardu-pagination {
+								  $separator-color: rgba($teal1, .25);
+								
+								  display: flex;
+								  flex-wrap: wrap;
+								  justify-content: center;
+								  list-style: none;
+								  margin: 30px 0 0;
+								  padding: 0;
+								
+								  .move-page {
+									flex-grow: 1;
+									...	
+								</code>
+							</pre>
+						</div>
+							
+						<pre class="smaller-height">
+							<code data-trim>
+							.demo-pagination {
+								@extend %ardu-pagination;
+							}
+							</code>
+						</pre>
+
+						<div>
+							<ul class="demo-pagination">
+								<li class="move-page prev">
+									<button class="text-button">
+										Prev
+									</button>
+								</li>
+							
+								<li class="page-number">
+									<button class="text-button">
+										1
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										2
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										3
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										...
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										5
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										6
+									</button>
+								</li>
+
+								<li class="page-number">
+									<button class="text-button">
+										7
+									</button>
+								</li>
+								
+								<li class="move-page next">
+									<button class="text-button">
+									Next
+									</button>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<section>
+					Risultato compilato
+					<!-- https://coderwall.com/p/7p7w2a/when-to-use-sass-mixins-extends-and-variables -->
+					
+					<div class="row code-row compiled">
+						<div>
+							<pre>
+								<code data-trim>
+								.notification, .success_notification, .error_notification {
+								  border-radius: 2px;
+								  color: $white;
+								  font-family: $typonine-sans-regular;
+								  font-size: 16px;
+								  ...
+								}
+								
+								.success_notification {
+								  background-color: $notifysuccess;
+								}
+								
+								.error_notification {
+								  background-color: $notifyerror;
+								}   	
+								</code>
+							</pre>
+
+							<div>Placeholder</div>							
+						</div>
+						<div>
+							<pre>
+								<code data-trim>
+								.success_notification {
+								  border-radius: 2px;
+								  color: $white;
+								  font-family: $typonine-sans-regular;
+								  font-size: 16px;
+								  ...
+								  background-color: $notifysuccess;
+								}
+								
+								.error_notification {
+								  border-radius: 2px;
+								  color: $white;
+								  font-family: $typonine-sans-regular;
+								  font-size: 16px;
+								  ... 
+								  background-color: $notifyerror;
+								}   
+								</code>
+							</pre>
+
+							<div>Mixin</div>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Browser supportati</h2>
+					<div>
+						Dati ultimo anno
+					</div>
+					<div class="row code-row">
+						<div>
+							<img src="images/browsers.jpg">	
+						</div>
+						<div>
+							Tutti
+						</div>
+					</div>
+
+					<div class="row code-row">
+						<div>
+							<img src="images/explorer.jpg">	
+						</div>
+						<div>
+							Internet Explorer	
+						</div>
+					</div>
+				</section>
+				
+				<section>
+					<h1>Sviluppi Futuri</h1>
+
+					<section>
+						<div class="row">
+							<img data-src="images/work-in-progress-computer.png" width="40%"/>
+							<ul>
+								<li>
+									Integrazione nuovi moduli
+								</li>
+								<li>
+									Sito Web interno con <br> guida ed esempi
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section>
+						<img src="images/instructions.png" style="margin-top:60px">
+
+						<aside class="notes">
+							Per ora guida nel Readme del repo,
+							<br> sito ispezionabile, interattivo
+						</aside>
+					</section>
+				</section>
+
+				<section>
+					<h1>Ringraziamenti</h1>
+
+					<div>
+						<img src="images/contributors.png" width="50%"/>
+					</div>
+				</section>
+
+				<section>
+					<h3>Le pene dello sviluppatore <br>(by Brooks)</h3>
+					<ul class="custom-list">
+						<li>
+							Tendere alla <b>perfezione</b> è la parte più difficile di imparare a programmare
+						</li>
+						<li>
+							Gli obiettivi vengono definiti da terzi e spesso <b>dipendiamo</b> da cose (soprattutto programmi) che non possiamo controllare
+						</li>
+						<li>
+							Ogni lavoro creativo porta con sé <b>ore noiose di duro lavoro</b>; programmare non fa eccezione
+						</li>
+						<li>
+							Il software è perennemente a rischio <b>obsolescenza</b>, ancora prima di essere completato
+						</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Le gioie dello sviluppatore <br>(by Brooks)</h3>
+					<ul class="custom-list">
+						<li>
+							Il piacere di <b>costruire</b> qualcosa
+						</li>
+						<li>
+							Il piacere di fare qualcosa di <b>utile</b> per altri (a volte, NDR)
+						</li>
+						<li>
+							Il fascino di modellare qualcosa simile ad un <b>rompicapo</b>, fatto di pezzi mobili interconnessi
+						</li>
+						<li>
+							La gioia di <b>imparare</b> sempre qualcosa di nuovo, attraverso un lavoro non ripetitivo
+						</li>
+						<li>
+							La delizia di lavorare in un mezzo di <b>puro pensiero</b>, che esiste, lavora e si muove in un modo che non è proprio degli oggetti materiali
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/gallery/gallery.plugin.js', async: true, condition: function() { return !!document.querySelector('.gallery'); } }
+				]
+			});
+		</script>
+	</body>
+</html>

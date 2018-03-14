@@ -1,0 +1,5 @@
+node_modules/*
+test/*
+lib/font/typonine-font/*
+css/*.css
+css/theme/*.css

@@ -1,0 +1,66 @@
+/**
+ * Arduino theme for reveal.js. Based on white theme
+ *
+ * By Stefania Mellai
+ */
+
+
+// Default mixins and settings -----------------
+@import '../template/settings';
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url('../../lib/font/source-sans-pro/source-sans-pro.css');
+@import url('../../lib/font/typonine-font/typonine.css');
+
+@import 'node_modules/arduino-sass/src/variables';
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: $feather;
+
+$mainColor: $dust;
+$headingColor: $dust;
+
+$mainFontSize: 42px;
+$mainFont: 'Typonine Sans Light', 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Typonine Sans Medium', 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: 3px;
+$headingTextTransform: uppercase;
+$headingFontWeight: normal;
+$linkColor: $teal2;
+$linkColorHover: $teal0;
+$selectionBackgroundColor: $teal0;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+.reveal {
+  &.has-dark-background {
+    &,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .controls {
+      color: $white;
+    }
+  }
+
+  &.has-light-background {
+    .controls {
+      color: $teal0;
+    }
+  }
+}
+
+
+// Theme template ------------------------------
+@import '../template/theme';
+// ---------------------------------------------
